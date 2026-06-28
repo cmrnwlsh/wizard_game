@@ -3,6 +3,6 @@ defmodule WizardGame.Application do
 
   @impl true
   def start(_type, _args) do
-    [] |> Supervisor.start_link(strategy: :one_for_one)
+    [Tui] |> Supervisor.start_link(strategy: :one_for_one)
   end
 end
